@@ -95,7 +95,8 @@ const linkedList = () => {
           node.nextNode = tempInfo;
           return node;
         } else if (node.nextNode == null) {
-          return "Error: INVALID INDEX!!";
+            node.nextNode = {value: v, nextNode: null}
+            return
         } else return checkNode(node.nextNode, i + 1);
       };
       return checkNode(list.head);
